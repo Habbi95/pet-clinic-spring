@@ -1,13 +1,12 @@
 package spring.jvargas.sfgpetclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import spring.jvargas.sfgpetclinic.model.Owner;
 import spring.jvargas.sfgpetclinic.model.Vet;
 import spring.jvargas.sfgpetclinic.services.OwnerService;
 import spring.jvargas.sfgpetclinic.services.VetService;
-import spring.jvargas.sfgpetclinic.services.map.OwnerServiceMap;
-import spring.jvargas.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +14,11 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired  // That´s no longer required from Spring 4.2
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

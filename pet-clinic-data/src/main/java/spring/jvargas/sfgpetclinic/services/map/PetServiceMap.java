@@ -1,10 +1,12 @@
 package spring.jvargas.sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import spring.jvargas.sfgpetclinic.model.Pet;
 import spring.jvargas.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
