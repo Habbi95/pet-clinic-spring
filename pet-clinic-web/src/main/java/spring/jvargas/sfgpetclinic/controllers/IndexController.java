@@ -10,4 +10,9 @@ public class IndexController {
     public String index(){
         return "index"; //Thymeleaf will go to search the index page
     }
+
+    @RequestMapping("/oups")
+    public String oupsHandler(){
+        return "notimplemented";
+    }
 }
