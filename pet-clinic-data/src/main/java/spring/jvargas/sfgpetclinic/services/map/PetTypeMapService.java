@@ -1,31 +1,30 @@
 package spring.jvargas.sfgpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import spring.jvargas.sfgpetclinic.model.Pet;
-import spring.jvargas.sfgpetclinic.services.PetService;
+import spring.jvargas.sfgpetclinic.model.PetType;
+import spring.jvargas.sfgpetclinic.services.PetTypeService;
 
 import java.util.Set;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
-
+public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
-    public Set<Pet> findAll() {
+    public Set<PetType> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Pet findById(Long id) {
+    public PetType findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Pet save(Pet object) {
+    public PetType save(PetType object) {
         return super.save(object);
     }
 
     @Override
-    public void delete(Pet object) {
+    public void delete(PetType object) {
         super.delete(object);
     }
 
