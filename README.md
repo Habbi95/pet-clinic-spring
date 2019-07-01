@@ -1,2 +1,4 @@
-# pet-clinic-spring
-This is an example for the pet clinic example from the course "Spring Framework 5: Begginer to Guru"
+# pet-clinic-spring 
+
+This is my personal project of Spring Pet Clinic used in the "Spring 5: Beginner to Guru" course.
+
